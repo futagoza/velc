@@ -1,0 +1,39 @@
+{
+  "name": "velc",
+  "version": "0.0.0",
+  "description": "PEG.js inspired Programming Language creator using Visual based tools",
+  "keywords": [
+    "velc",
+    "visual",
+    "programming",
+    "lanaguage",
+    "parser",
+    "compiler",
+    "transpiler",
+    "peg",
+    "editor",
+    "online"
+  ],
+  "homepage": "https://erispa.github.io/velc",
+  "author": {
+    "name": "Futago-za Ryuu",
+    "email": "futagoza.ryuu@gmail.com",
+    "url": "https://futagoza.github.io/"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/erispa/velc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/erispa/velc/issues"
+  },
+  "dependencies": {
+    "express": "4.11.2",
+    "serve-favicon": "2.2.0"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}
