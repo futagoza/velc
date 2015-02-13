@@ -1,0 +1,11 @@
+{
+  "name": "pegjs-grammer",
+  "version": "0.8.0-dev",
+  "description": "The grammer file for the PEG.js parser",
+  "homepage": "https://github.com/pegjs/pegjs/",
+  "author": {
+    "name": "Futago-za Ryuu",
+    "email": "futagoza.ryuu@gmail.com",
+    "url": "https://futagoza.github.io/"
+  }
+}

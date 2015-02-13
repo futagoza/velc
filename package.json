@@ -1,7 +1,7 @@
 {
   "name": "velc",
   "version": "0.0.0",
-  "description": "PEG.js inspired Programming Language creator using Visual based tools",
+  "description": "PEG.js inspired programming language creator using visual based tools.",
   "keywords": [
     "velc",
     "visual",
@@ -21,7 +21,10 @@
     "url": "https://futagoza.github.io/"
   },
   "license": "MIT",
-  "main": "index.js",
+  "main": "velc-middleware.js",
+  "bin": {
+    "velc": "server.js"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/erispa/velc.git"
@@ -32,6 +35,9 @@
   "dependencies": {
     "express": "4.11.2",
     "serve-favicon": "2.2.0"
+  },
+  "devDependencies": {
+    "pm2": "0.12.5"
   },
   "engines": {
     "node": ">= 0.10.0"

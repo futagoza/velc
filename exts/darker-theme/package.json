@@ -1,0 +1,11 @@
+{
+  "name": "Dark Theme",
+  "version": "1.0.0",
+  "description": "A darker theme for the Velc Editor",
+  "homepage": "https://erispa.github.io/velc",
+  "author": {
+    "name": "Futago-za Ryuu",
+    "email": "futagoza.ryuu@gmail.com",
+    "url": "https://futagoza.github.io/"
+  }
+}
