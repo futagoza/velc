@@ -11,9 +11,10 @@
     <title>Velc Editor</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/bootstrap-cover.css" rel="stylesheet">
+    <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">-->
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/velc-editor.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,49 +24,149 @@
     <![endif]-->
   </head>
   <body>
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li><a href="index.html">Home</a></li>
-                  <li class="active"><a href="editor.html">Editor</a></li>
-                  <li><a href="https://github.com/erispa/velc">Github</a></li>
-                  <li><a href="https://github.com/erispa/velc/wiki">Wiki</a></li>
-                  <li><a href="https://github.com/erispa/velc/issues">Issues</a></li>
-                  <li><a href="https://www.npmjs.com/package/velc">NPM</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <img src="imgs/velc-logo.png">
-            <p class="lead"><h1>UNDER DEVELOPMENT</h1></p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>
-                Copyright &copy; 2015 <a href="https://futagoza.github.io/">Futago-za Ryuu</a>, <a href="https://erispa.github.io/">Erispa</a><br>
-                <a href="http://opensource.org/licenses/MIT">The MIT License, http://opensource.org/licenses/MIT</a>
-              </p>
-            </div>
-          </div>
-
-        </div>
-
+    <!-- Fixed navbar -->
+  <div class="navbar navbar-static navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle toggle-left hidden-md hidden-lg" data-toggle="sidebar" data-target=".sidebar-left">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="imgs/velc-logo.png" class="btn navbar-brand img-responsive dropdown-toggle" alt="Velc" data-toggle="dropdown" aria-expanded="false">
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a data-toggle="modal" data-target="#newGrammer" title="New">New</a>
+              <div class="modal fade" id="newGrammer" tabindex="-1" role="dialog" aria-labelledby="newLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title" id="newLabel">Create a new grammer file...</h4>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-primary">Create</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a data-toggle="modal" data-target="#openGrammer" title="Open">Open</a>
+              <div class="modal fade" id="openGrammer" tabindex="-1" role="dialog" aria-labelledby="openLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title" id="openLabel">Open a grammer file...</h4>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-primary">Open</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a data-toggle="modal" data-target="#saveGrammer" title="Save">Save</a>
+              <div class="modal fade" id="saveGrammer" tabindex="-1" role="dialog" aria-labelledby="saveLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title" id="saveLabel">Saving grammer...</h4>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a data-toggle="modal" data-target="#saveasGrammer" title="Save As">Save As</a>
+              <div class="modal fade" id="saveasGrammer" tabindex="-1" role="dialog" aria-labelledby="saveasLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title" id="saveasLabel">Save grammer as...</h4>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a disabled>Import</a></li>
+            <li><a>Export</a></li>
+            <li class="divider"></li>
+            <li>
+              <a data-toggle="modal" data-target="#about" href="html/about.html" title="About">About</a>
+            </li>
+          </ul>
+        <a class="btn navbar-brand" data-toggle="modal" data-target="#save" href="html/save.html" title="Save">Save</a>
+        <!--<a class="btn navbar-brand velc-model" data-partial="save" title="Save">Save</a>
+        <a class="btn navbar-brand" data-toggle="modal" data-target="#save" title="Save">Save</a>
+        <include src="html/save.html" />-->
       </div>
-
+      <button type="button" class="navbar-toggle toggle-right" data-toggle="sidebar" data-target=".sidebar-right">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
+  </div>
+  
+  <!-- Begin page content -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-7 col-sm-3 col-md-3 sidebar sidebar-left sidebar-animate sidebar-md-show">
+        <ul class="nav navbar-stacked">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <img src="imgs/velc-logo.png" class="img-responsive" alt="Velc">
+      </div>
+      <div class="main col-md-9 col-md-offset-3">
+        <div class="page-header">
+          <h1>Sticky footer with fixed navbar</h1>
+        </div>
+        <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added within <code>#wrap</code> with <code>padding-top: 60px;</code> on the <code>.container</code>.</p>
+        <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+      </div>
+      <div class="col-xs-7 col-sm-3 col-md-3 sidebar sidebar-right sidebar-animate">
+        <ul class="nav navbar-stacked">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
     <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/html-include.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/velc-editor.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
